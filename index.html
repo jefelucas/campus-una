@@ -1,13 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Campus UNA</title>
+    <title></title>
+    <meta charset="utf-8" />
 
+    <!-- Reference to the Bing Maps SDK -->
+    <script type='text/javascript'
+            src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=[YOUR_BING_MAPS_KEY]' 
+            async defer></script>
+    
+    <script type='text/javascript'>
+    function GetMap()
+    {
+        var map = new Microsoft.Maps.Map('#myMap');
+
+        //Add your post map load code here.
+    }
+    </script>
 </head>
 <body>
-Info about places, buildings, faculties, offices, etc. within the UNA's Campus
+    <div id="myMap" style="position:relative;width:600px;height:400px;"></div>
 </body>
 </html>
