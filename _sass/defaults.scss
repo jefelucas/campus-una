@@ -6,6 +6,8 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 body{
   font-family: 'PT Sans', sans-serif;
@@ -21,4 +23,7 @@ ul{
 pre{
   font-family: 'Fira Mono', monospace;
   font-size: .8rem;
+}
+#mapbox{
+  min-height: 100%;
 }
