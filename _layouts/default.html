@@ -6,12 +6,24 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{{ page.title }}</title>
   <script src='https://www.bing.com/api/maps/mapcontrol?callback=loadMap&key=AmMjEr3P3foenzC7FGk-jrW4IUcSCXuEE9jAWVUhU1oa_u9ycGGzp0qeM8Mwb3zi' async defer></script>
-  <script src="/assets/js/map.js"></script>
   <link rel="stylesheet" href="/assets/css/sheets.css">
 </head>
 <body>
   <main>
     {{ content }}
+    <div id="mapbox" class="">
+
+    </div>
+    <script>
+    function loadMap() {
+      var navigationBarMode = Microsoft.Maps.NavigationBarMode;
+      var map = new Microsoft.Maps.Map(document.getElementById('mapbox'), {
+          /* No need to set credentials if already passed in URL */
+          navigationBarMode: navigationBarMode.compact,
+          supportedMapTypes: [Microsoft.Maps.MapTypeId.road, Microsoft.Maps.MapTypeId.aerial, Microsoft.Maps.MapTypeId.grayscale, Microsoft.Maps.MapTypeId.canvasLight] });
+
+    }
+    </script>
   </main>
 </body>
 </html>
